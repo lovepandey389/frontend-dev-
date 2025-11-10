@@ -1,0 +1,6 @@
+/* Q2: Height and Width Practice Layout */
+body{font-family:Arial,Helvetica,sans-serif;padding:1.25rem;background:#fff;}
+.demo-area{display:flex;align-items:center;justify-content:center;gap:1rem;min-height:40vh;flex-wrap:wrap;}
+.a{width:220px;height:150px;background:#ef4444;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:8px;}
+.b{width:40%;min-height:10vh;max-width:420px;background:#10b981;color:#fff;padding:1rem;border-radius:8px;overflow:auto;}
+.c{width:15em;height:20vh;max-width:280px;background:#f59e0b;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:8px;}

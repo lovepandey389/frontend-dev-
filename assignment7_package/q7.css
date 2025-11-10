@@ -1,0 +1,11 @@
+/* Q7: Typography and Text Styling */
+body{font-family:Georgia,serif;padding:1rem;background:#fff;color:#111;}
+.article{max-width:720px;margin:0 auto;line-height:1.6;}
+h1{font-family:Georgia,serif;}
+.sans{font-family:system-ui,Segoe UI,Roboto,Arial;}
+.serif{font-family:Georgia,serif;font-weight:700;}
+mark{background:#fff3bf;color:#92400e;padding:.05rem .15rem;border-radius:3px;}
+strong{color:#0b2447;}
+em{color:#6b7280;font-style:italic;}
+.article p::first-line{font-weight:600;}
+.article p::first-letter{font-size:2rem;float:left;margin-right:.25rem;color:#2563eb;}

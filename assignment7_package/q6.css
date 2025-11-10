@@ -1,0 +1,9 @@
+/* Q6: CSS Transformations Showcase */
+body{font-family:Arial,Helvetica,sans-serif;padding:1rem;background:#eef2ff;}
+.demo-area{display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap;}
+.transform{width:120px;height:80px;border-radius:8px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid rgba(0,0,0,0.06);transition:all .4s ease;}
+.label{margin-top:.35rem;text-align:center;font-size:.9rem;}
+.rotate:hover{transform:rotate(12deg);}
+.scale:hover{transform:scale(1.12);}
+.translate:hover{transform:translateX(12px);}
+.skew:hover{transform:skewX(-8deg);}
