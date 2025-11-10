@@ -1,0 +1,12 @@
+/* Q10: Mini UI Layout - header, main card, footer with form + image */
+body{font-family:Arial,Helvetica,sans-serif;padding:0;margin:0;background:#f6f8fb;display:flex;flex-direction:column;min-height:100vh;}
+header{background:#2563eb;color:#fff;padding:1rem;text-align:center;}
+main{flex:1;display:flex;align-items:center;justify-content:center;padding:2rem;}
+.card{width:100%;max-width:920px;background:#fff;border-radius:12px;padding:1rem;box-shadow:0 10px 30px rgba(2,6,23,0.06);display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-start;}
+.card .left{flex:1;min-width:220px;}
+.card .right{width:220px;}
+form{display:flex;flex-direction:column;gap:.6rem;}
+input,textarea{padding:.6rem;border-radius:8px;border:1px solid #e6e8eb;}
+input:focus,textarea:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;}
+footer{background:#f1f5f9;padding:1rem;text-align:center;}
+@media(max-width:700px){.card{flex-direction:column;align-items:stretch;}}

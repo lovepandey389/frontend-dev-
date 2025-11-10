@@ -1,0 +1,11 @@
+/* Q5: Styled Button Collection */
+body{font-family:Arial,Helvetica,sans-serif;padding:1rem;background:#f3f4f6;}
+.btns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+.btn{padding:.6rem .9rem;border-radius:8px;border:none;cursor:pointer;transition:all .2s ease;box-shadow:0 4px 10px rgba(2,6,23,0.06);}
+.btn.primary{background:#2563eb;color:#fff;}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(37,99,235,0.12);}
+.btn.secondary{background:#10b981;color:#fff;}
+.btn.outline{background:transparent;border:1px solid #2563eb;color:#2563eb;}
+.btn.disabled{background:#e5e7eb;color:#9ca3af;cursor:not-allowed;box-shadow:none;}
+.btn:active{transform:translateY(2px);}
+.btn:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;}

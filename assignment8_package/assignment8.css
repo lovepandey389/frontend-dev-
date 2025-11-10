@@ -1,0 +1,93 @@
+/* assignment8.css — Combined stylesheet for Q1–Q10 */
+/* Base */
+:root{--accent:#2563eb;--muted:#6b7280;}
+*{box-sizing:border-box;}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:#f6f7fb;margin:0;padding:1rem;}
+.site-header{max-width:1100px;margin:0 auto 1rem;padding:1rem;border-radius:10px;background:linear-gradient(90deg,rgba(59,130,246,0.06),rgba(99,102,241,0.03));}
+.main-nav{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.5rem;}
+.demo-section{background:#fff;max-width:1100px;margin:1rem auto;padding:1rem;border-radius:10px;box-shadow:0 1px 3px rgba(15,23,42,0.06);}
+.demo-section h2{margin-top:0;}
+
+/* Q1 */
+.demo-row{display:flex;gap:1rem;align-items:center;}
+.example-link{padding:.5rem .7rem;border-radius:6px;background:#fff;border:1px solid rgba(0,0,0,0.06);text-decoration:none;color:#0f172a;transition:background .2s ease;}
+.example-link:hover{background:rgba(37,99,235,0.08);}
+.example-button{padding:.5rem .9rem;border-radius:6px;border:1px solid rgba(0,0,0,0.06);cursor:pointer;transition:transform .12s ease,box-shadow .12s ease;}
+.example-button:active{transform:translateY(2px);box-shadow:inset 0 2px 4px rgba(0,0,0,0.06);}
+.example-button:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;}
+.pseudo-list{list-style:none;padding:0;margin:0;display:flex;gap:.5rem;}
+.pseudo-list li{padding:.4rem .6rem;border:1px solid #e5e7eb;border-radius:6px;}
+.pseudo-list li:nth-child(2){background:rgba(99,102,241,0.08);font-weight:600;}
+.note{font-size:.9rem;color:var(--muted);margin-top:.5rem;}
+
+/* Q2: tooltips */
+.wrap{display:flex;gap:1.25rem;align-items:center;justify-content:center;}
+.tip{position:relative;padding:.5rem .6rem;border-radius:6px;background:#f3f4f6;border:1px solid rgba(0,0,0,0.05);}
+.tooltip{position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 8px);background:#111;color:#fff;padding:.45rem .6rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .3s ease-in-out,transform .3s ease-in-out;}
+.tip:hover .tooltip{opacity:1;transform:translateX(-50%) translateY(-4px);}
+.tooltip::after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:100%;border-width:6px;border-style:solid;border-color:#111 transparent transparent transparent;}
+
+/* Q3: gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:1000px;margin:0 auto;}
+figure{position:relative;overflow:hidden;border-radius:10px;margin:0;box-shadow:0 6px 18px rgba(2,6,23,0.06);}
+figure img{display:block;width:100%;height:220px;object-fit:cover;transition:transform .25s ease;}
+figure:hover img{transform:scale(1.08);}
+figure::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,0);transition:background .25s ease;}
+figure:hover::after{background:rgba(0,0,0,0.25);}
+figcaption{padding:.6rem;background:#fff;text-align:center;font-size:.95rem;}
+@media(max-width:700px){.gallery{grid-template-columns:1fr;}figure img{height:180px;}}
+
+/* Q4: selectors */
+.demo-area{max-width:900px;margin:0 auto;padding:1rem;border:1px solid #e6e8eb;border-radius:8px;}
+p{color:#111;}
+.highlight{background:rgba(99,102,241,0.06);padding:.25rem;border-radius:4px;}
+#unique{font-weight:700;color:#111;}
+a[target="_blank"]{text-decoration:underline dotted;}
+
+/* Q5: buttons */
+.btns{display:flex;gap:1rem;align-items:center;flex-wrap:wrap;}
+.btn{padding:.6rem .9rem;border-radius:8px;border:none;cursor:pointer;transition:all .2s ease;box-shadow:0 4px 10px rgba(2,6,23,0.06);}
+.btn.primary{background:#2563eb;color:#fff;}
+.btn.primary:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(37,99,235,0.12);}
+.btn.secondary{background:#10b981;color:#fff;}
+.btn.outline{background:transparent;border:1px solid #2563eb;color:#2563eb;}
+.btn.disabled{background:#e5e7eb;color:#9ca3af;cursor:not-allowed;box-shadow:none;}
+.btn:active{transform:translateY(2px);}
+.btn:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;}
+
+/* Q6: animations */
+.wrap-anim{display:flex;gap:2rem;align-items:center;justify-content:center;}
+.box{width:80px;height:80px;border-radius:8px;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;}
+@keyframes moveX{0%{transform:translateX(-20px)}50%{transform:translateX(20px)}100%{transform:translateX(-20px)}}
+.move{animation:moveX 2.5s ease-in-out infinite;}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-40px)}}
+.bounce{width:60px;height:60px;border-radius:50%;background:#f59e0b;animation:bounce 1.2s ease-in-out infinite;}
+@keyframes colorShift{0%{background:#ef4444}50%{background:#7c3aed}100%{background:#ef4444}}
+.color{width:80px;height:80px;border-radius:8px;animation:colorShift 3s ease-in-out infinite;}
+
+/* Q7: UI components */
+.card{background:#fff;padding:1rem;border-radius:12px;box-shadow:0 8px 24px rgba(2,6,23,0.06);width:360px;display:flex;gap:.6rem;}
+.search{display:flex;gap:.5rem;}
+.search input{flex:1;padding:.6rem;border-radius:8px;border:1px solid #e5e7eb;}
+.controls{display:flex;gap:.5rem;margin-top:.6rem;}
+.controls button{padding:.5rem .7rem;border-radius:8px;border:none;background:#2563eb;color:#fff;}
+
+/* Q8: box-sizing compare */
+.compare{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;justify-content:center;}
+.box{width:220px;padding:20px;border:10px solid rgba(0,0,0,0.06);border-radius:8px;text-align:center;background:#f8fafc;}
+.box.border-box{box-sizing:border-box;background:#fff;}
+.desc{max-width:420px;}
+@media(max-width:700px){.compare{flex-direction:column;align-items:center;}}
+
+/* Q9: combined effects */
+.examples{display:flex;gap:1rem;align-items:center;justify-content:center;flex-wrap:wrap;}
+.example{padding:.6rem .9rem;border-radius:8px;border:1px solid rgba(0,0,0,0.06);background:#fff;transition:all .25s ease;box-shadow:0 6px 12px rgba(2,6,23,0.05);cursor:pointer;}
+.example:hover{transform:scale(1.06);background:#eef2ff;box-shadow:0 18px 36px rgba(2,6,23,0.12);}
+.example:active{transform:scale(0.99);}
+.example:focus{outline:3px solid rgba(37,99,235,0.18);outline-offset:3px;}
+
+/* Q10: mini UI */
+.mini-card{display:flex;gap:1rem;align-items:flex-start;max-width:900px;background:#fff;padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.06);}
+.mini-card form{flex:1;display:flex;flex-direction:column;gap:.6rem;}
+.mini-card .thumb img{width:120px;height:120px;object-fit:cover;border-radius:8px;}
+@media(max-width:700px){.mini-card{flex-direction:column;align-items:stretch;}}

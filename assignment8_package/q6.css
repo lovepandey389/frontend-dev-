@@ -1,0 +1,13 @@
+/* Q6: CSS Animations with keyframes */
+body{font-family:Arial,Helvetica,sans-serif;padding:1rem;background:#fff;display:flex;align-items:center;justify-content:center;min-height:80vh;}
+.wrap{display:flex;gap:2rem;align-items:center;justify-content:center;}
+.box{width:80px;height:80px;border-radius:8px;background:#2563eb;color:#fff;display:flex;align-items:center;justify-content:center;}
+/* moving box */
+@keyframes moveX{0%{transform:translateX(-20px)}50%{transform:translateX(20px)}100%{transform:translateX(-20px)}}
+.move{animation:moveX 2.5s ease-in-out infinite;}
+/* bouncing ball */
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-40px)}}
+.bounce{width:60px;height:60px;border-radius:50%;background:#f59e0b;animation:bounce 1.2s ease-in-out infinite;}
+/* color-change */
+@keyframes colorShift{0%{background:#ef4444}50%{background:#7c3aed}100%{background:#ef4444}}
+.color{width:80px;height:80px;border-radius:8px;animation:colorShift 3s ease-in-out infinite;}

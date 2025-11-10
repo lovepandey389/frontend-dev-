@@ -1,0 +1,14 @@
+/* Q2: Tooltip Demonstration (pure CSS) */
+body{font-family:Arial,Helvetica,sans-serif;background:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:center;min-height:80vh;}
+.wrap{display:flex;gap:1.25rem;align-items:center;justify-content:center;}
+.tip{
+  position:relative;padding:.5rem  .6rem;border-radius:6px;background:#f3f4f6;border:1px solid rgba(0,0,0,0.05);
+}
+.tip .tooltip{
+  position:absolute;left:50%;transform:translateX(-50%);bottom:calc(100% + 8px);
+  background:#111;color:#fff;padding:.45rem .6rem;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;
+  transition:opacity .3s ease-in-out,transform .3s ease-in-out;
+}
+.tip:hover .tooltip{opacity:1;transform:translateX(-50%) translateY(-4px);}
+/* ensure tooltip appears above */
+.tooltip::after{content:"";position:absolute;left:50%;transform:translateX(-50%);top:100%;border-width:6px;border-style:solid;border-color:#111 transparent transparent transparent;}
